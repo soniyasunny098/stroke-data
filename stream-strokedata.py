@@ -3,7 +3,7 @@ from pycaret.classification import load_model, predict_model
 import streamlit as st
 import pandas as pd
 import numpy as np
-model = load_model('stroke_data')
+model = load_model('stroke-data')
 
 
 
@@ -17,8 +17,8 @@ def predict(model, input_df):
 
 def run():
     from PIL import Image
-    image = Image.open('/content/brainomixstroke.jpg')
-    image_office = Image.open('/content/stroke-recovery-timeline.jpg')
+    image = Image.open('brainomixstroke.jpg')
+    image_office = Image.open('stroke-recovery-timeline.jpg')
     st.image(image,use_column_width=True)
     add_selectbox = st.sidebar.selectbox(
     "How would you like to predict?",
